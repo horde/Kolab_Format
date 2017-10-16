@@ -11,7 +11,7 @@
   <email>p@rdus.de</email>
   <active>yes</active>
  </lead>
- <date>2016-07-02</date>
+ <date>2017-10-16</date>
  <version>
   <release>2.0.10</release>
   <api>2.0.0</api>
@@ -38,7 +38,6 @@
        </dir> <!-- /doc/Horde/Kolab/Format/examples -->
        <file name="COPYING" role="doc" />
        <file name="DOCS_ORIGIN" role="doc" />
-       <file name="README" role="doc" />
        <file name="TODO" role="doc" />
        <file name="usage.txt" role="doc" />
       </dir> <!-- /doc/Horde/Kolab/Format -->
@@ -258,6 +257,7 @@
      </dir> <!-- /test/Horde/Kolab -->
     </dir> <!-- /test/Horde -->
    </dir> <!-- /test -->
+   <file name="README.rst" role="doc" />
   </dir> <!-- / -->
  </contents>
  <dependencies>
@@ -310,9 +310,9 @@
  </dependencies>
  <phprelease>
   <filelist>
+   <install as="README.rst" name="README.rst" />
    <install as="COPYING" name="doc/Horde/Kolab/Format/COPYING" />
    <install as="DOCS_ORIGIN" name="doc/Horde/Kolab/Format/DOCS_ORIGIN" />
-   <install as="README" name="doc/Horde/Kolab/Format/README" />
    <install as="TODO" name="doc/Horde/Kolab/Format/TODO" />
    <install as="usage.txt" name="doc/Horde/Kolab/Format/usage.txt" />
    <install as="examples/event.php" name="doc/Horde/Kolab/Format/examples/event.php" />
@@ -794,7 +794,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2016-07-02</date>
+   <date>2017-10-16</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
 * 
