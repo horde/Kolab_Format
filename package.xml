@@ -36,8 +36,8 @@
         <file name="new_type.php" role="doc" />
         <file name="speed_check.php" role="doc" />
        </dir> <!-- /doc/Horde/Kolab/Format/examples -->
-       <file name="DOCS_ORIGIN" role="doc" />
-       <file name="TODO" role="doc" />
+       <file name="DOCS_ORIGIN.rst" role="doc" />
+       <file name="TODO.rst" role="doc" />
        <file name="usage.txt" role="doc" />
       </dir> <!-- /doc/Horde/Kolab/Format -->
      </dir> <!-- /doc/Horde/Kolab -->
@@ -310,12 +310,12 @@
  </dependencies>
  <phprelease>
   <filelist>
-   <install as="DOCS_ORIGIN" name="doc/Horde/Kolab/Format/DOCS_ORIGIN" />
+   <install as="DOCS_ORIGIN.rst" name="doc/Horde/Kolab/Format/DOCS_ORIGIN.rst" />
    <install as="examples/event.php" name="doc/Horde/Kolab/Format/examples/event.php" />
    <install as="examples/event_v2.php" name="doc/Horde/Kolab/Format/examples/event_v2.php" />
    <install as="examples/new_type.php" name="doc/Horde/Kolab/Format/examples/new_type.php" />
    <install as="examples/speed_check.php" name="doc/Horde/Kolab/Format/examples/speed_check.php" />
-   <install as="TODO" name="doc/Horde/Kolab/Format/TODO" />
+   <install as="TODO.rst" name="doc/Horde/Kolab/Format/TODO.rst" />
    <install as="usage.txt" name="doc/Horde/Kolab/Format/usage.txt" />
    <install as="Horde/Kolab/Format.php" name="lib/Horde/Kolab/Format.php" />
    <install as="Horde/Kolab/Format/Date.php" name="lib/Horde/Kolab/Format/Date.php" />
