@@ -11,7 +11,7 @@
   <email>p@rdus.de</email>
   <active>yes</active>
  </lead>
- <date>2017-10-20</date>
+ <date>2017-10-27</date>
  <version>
   <release>2.0.10</release>
   <api>2.0.0</api>
@@ -35,6 +35,7 @@
         <file name="new_type.php" role="doc" />
         <file name="speed_check.php" role="doc" />
        </dir> <!-- /doc/Horde/Kolab/Format/examples -->
+       <file name="CHANGES" role="doc" />
        <file name="DOCS_ORIGIN.rst" role="doc" />
        <file name="TODO.rst" role="doc" />
        <file name="usage.txt" role="doc" />
@@ -306,6 +307,7 @@
  </dependencies>
  <phprelease>
   <filelist>
+   <install as="CHANGES" name="doc/Horde/Kolab/Format/CHANGES" />
    <install as="DOCS_ORIGIN.rst" name="doc/Horde/Kolab/Format/DOCS_ORIGIN.rst" />
    <install as="examples/event.php" name="doc/Horde/Kolab/Format/examples/event.php" />
    <install as="examples/event_v2.php" name="doc/Horde/Kolab/Format/examples/event_v2.php" />
@@ -789,7 +791,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2017-10-20</date>
+   <date>2017-10-27</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
    </notes>
