@@ -1,0 +1,179 @@
+-----------
+v2.0.10-git
+-----------
+
+
+------
+v2.0.9
+------
+
+[jan] Drop split() usage (Remi Collet <fedora@famillecollet.com>).
+
+
+------
+v2.0.8
+------
+
+[jan] Mark PHP 7 as supported.
+
+
+------
+v2.0.7
+------
+
+[jan] Fix issues with certain locales like Turkish.
+
+
+------
+v2.0.6
+------
+
+[jan] Improve PSR-2 compatibility.
+
+
+------
+v2.0.5
+------
+
+[jan] Correctly translate display-name attribute of distribution lists.
+
+
+------
+v2.0.4
+------
+
+[jan] Fix saving all day events when the end date is on the next day (Thomas
+      Jarosch <thomas.jarosch@intra2net.com>, Bug #12627).
+
+
+------
+v2.0.3
+------
+
+[jan] Fix unit tests.
+
+
+------
+v2.0.2
+------
+
+[jan] Return date-only values as floating dates (Bug #11767).
+[jan] Correctly format all-day events (Bug #11767).
+
+
+------
+v2.0.1
+------
+
+[jan] Deprecate timezone parameters, always write UTC datetime values (Bug
+      #11695).
+
+
+------
+v2.0.0
+------
+
+First stable release for Horde 5.
+
+
+---------
+v2.0.0RC1
+---------
+
+[jan] Write custom Horde attributes to task objects.
+
+
+-----------
+v2.0.0beta2
+-----------
+
+[jan] Categories attributes are returned and passed as an array now.
+
+
+-----------
+v2.0.0beta1
+-----------
+
+First beta release for Horde 5.
+
+
+------------
+v2.0.0alpha1
+------------
+
+First alpha release for Horde 5.
+
+
+------
+v1.1.2
+------
+
+[jan] Fix parsing composite phone fields
+      (alexander.haensch@ipc.uni-tuebingen.de, Bug #11047).
+
+
+------
+v1.1.1
+------
+
+[gwr] Fixed datatype for birthday and anniversary contact attributes.
+[gwr] Completed missing data API v1 support.
+
+
+------
+v1.1.0
+------
+
+[gwr] Move Horde specific functionality out of the events parser.
+[gwr] Move Horde specific functionality out of the contacts parser.
+[gwr] Improve data validation.
+[gwr] KEP2 support.
+[gwr] Allow adding XML attributes on the fly.
+[gwr] Avoid overwriting data from other Kolab clients.
+[gwr] Add improved root node handler (version checking, avoids overwriting
+      other data).
+
+
+------
+v1.0.1
+------
+
+[gwr] Removed stray kolab-format script which was moved to Horde_Kolab_Cli.
+[gwr] Fixed detecting parse errors in subsequent parse attempts.
+
+
+------
+v1.0.0
+------
+
+First stable release for Horde 4.
+
+
+---------
+v1.0.0RC2
+---------
+
+Second release candidate for Horde 4.
+
+
+---------
+v1.0.0RC1
+---------
+
+First release candidate for Horde 4.
+[gwr] Moved Horde specific functionality out of the tasks parser.
+[gwr] Moved Horde specific functionality out of the note parser.
+
+
+-----------
+v1.0.0beta1
+-----------
+
+First beta release for Horde 4.
+
+
+------------
+v1.0.0alpha1
+------------
+
+First alpha release for Horde 4.
