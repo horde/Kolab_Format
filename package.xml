@@ -3,7 +3,7 @@
  <name>Horde_Kolab_Format</name>
  <channel>pear.horde.org</channel>
  <extends>Kolab_Format</extends>
- <summary>A package for reading/writing Kolab data formats.</summary>
+ <summary>Kolab data format library</summary>
  <description>This package allows converting Kolab data objects from XML to data arrays.</description>
  <lead>
   <name>Gunnar Wrobel</name>
@@ -11,7 +11,7 @@
   <email>p@rdus.de</email>
   <active>yes</active>
  </lead>
- <date>2017-10-27</date>
+ <date>2017-11-11</date>
  <version>
   <release>2.0.10</release>
   <api>2.0.0</api>
@@ -792,7 +792,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2017-10-27</date>
+   <date>2017-11-11</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
 * 
