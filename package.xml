@@ -163,7 +163,9 @@
        <file name="Factory.php" role="php" />
        <file name="Xml.php" role="php" />
       </dir> <!-- /lib/Horde/Kolab/Format -->
-      <file name="Format.php" role="php" />
+      <file name="Format.php" role="php">
+       <tasks:replace from="@version@" to="version" type="package-info" />
+      </file>
      </dir> <!-- /lib/Horde/Kolab -->
     </dir> <!-- /lib/Horde -->
    </dir> <!-- /lib -->
