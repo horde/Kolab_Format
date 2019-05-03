@@ -2,7 +2,7 @@
 id: Kolab_Format
 name: Kolab_Format
 full: Kolab data format library
-description: This package allows converting Kolab data objects from XML to data arrays.
+description: A library that allows converting Kolab data objects from XML to data arrays.
 list: dev
 type: library
 homepage: https://www.horde.org/libraries/Horde_Kolab_Format
