@@ -1,7 +1,7 @@
 {
-    "name": "horde/kolab-format",
+    "name": "horde/kolab_format",
     "description": "Kolab data format library",
-    "type": "library",
+    "type": "horde-library",
     "homepage": "https://www.horde.org/libraries/Horde_Kolab_Format",
     "license": "LGPL-2.1",
     "authors": [
@@ -12,27 +12,24 @@
         }
     ],
     "version": "2.0.10",
-    "time": "2017-11-14",
+    "time": "2020-10-27",
     "repositories": [
         {
-            "type": "pear",
-            "url": "https://pear.horde.org"
+            "type": "composer",
+            "url": "https://horde-satis.maintaina.com"
         }
     ],
     "require": {
+        "horde/horde-installer-plugin": "dev-master",
         "php": "^5.3 || ^7",
-        "pear-pear.horde.org/Horde_Exception": "^2",
-        "pear-pear.horde.org/Horde_Util": "^2",
+        "horde/exception": "dev-master",
+        "horde/util": "dev-master",
         "ext-dom": "*"
     },
     "suggest": {
-        "pear-pear.horde.org/Horde_Support": "^2",
-        "pear-pear.horde.org/Horde_Test": "^2.1",
+        "horde/support": "^2",
+        "horde/test": "^2.1",
         "ext-mbstring": "*"
-    },
-    "replace": {
-        "pear-pear.horde.org/Horde_Kolab_Format": "2.*",
-        "pear-horde/Horde_Kolab_Format": "2.*"
     },
     "autoload": {
         "psr-0": {
