@@ -20,19 +20,22 @@ state:
   release: stable
   api: stable
 license:
-  identifier: LGPL-2.1
+  identifier: LGPL-2.1-only
   uri: http://www.horde.org/licenses/lgpl21
 dependencies:
   required:
-    php: ^5.3 || ^7
-    pear:
-      pear.horde.org/Horde_Exception: ^2
-      pear.horde.org/Horde_Util: ^2
+    php: ^7 || ^8
+    composer:
+      horde/exception: ^3
+      horde/util: ^3
     ext:
       dom: '*'
   optional:
-    pear:
-      pear.horde.org/Horde_Support: ^2
-      pear.horde.org/Horde_Test: ^2.1
+    composer:
+      horde/support: ^3
+      horde/test: ^3
     ext:
       mbstring: '*'
+  dev:
+    composer:
+      horde/test: ^3
