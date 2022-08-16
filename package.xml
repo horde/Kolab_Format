@@ -4,14 +4,14 @@
  <channel>pear.horde.org</channel>
  <extends>Kolab_Format</extends>
  <summary>Kolab data format library</summary>
- <description>This package allows converting Kolab data objects from XML to data arrays.</description>
+ <description>A library that allows converting Kolab data objects from XML to data arrays.</description>
  <lead>
   <name>Gunnar Wrobel</name>
   <user>wrobel</user>
   <email>p@rdus.de</email>
   <active>no</active>
  </lead>
- <date>2017-11-14</date>
+ <date>2022-08-16</date>
  <version>
   <release>2.0.10</release>
   <api>2.0.0</api>
@@ -20,12 +20,21 @@
   <release>stable</release>
   <api>stable</api>
  </stability>
- <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
+ <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1-only</license>
  <notes>
 * 
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
+   <dir name=".github">
+    <dir name="workflows">
+     <file name="ci.yml" role="php" />
+     <file name="phpdoc.yml" role="php" />
+     <file name="release.yml" role="php" />
+     <file name="update-composer-json.yml" role="php" />
+     <file name="update-satis.yml" role="php" />
+    </dir> <!-- /.github/workflows -->
+   </dir> <!-- /.github -->
    <dir name="doc">
     <dir name="Horde">
      <dir name="Kolab">
@@ -170,139 +179,108 @@
     </dir> <!-- /lib/Horde -->
    </dir> <!-- /lib -->
    <dir name="test">
-    <dir name="Horde">
-     <dir name="Kolab">
-      <dir name="Format">
-       <dir name="fixtures">
-        <file name="contact-kyr.xml" role="test" />
-        <file name="contact_address.xml" role="test" />
-        <file name="contact_category.xml" role="test" />
-        <file name="contact_mail.xml" role="test" />
-        <file name="contact_pgp.xml" role="test" />
-        <file name="event_umlaut.xml" role="test" />
-        <file name="event_umlaut_broken.xml" role="test" />
-        <file name="preferences_read_old.xml" role="test" />
-        <file name="preferences_write_old.xml" role="test" />
-        <file name="recur.xml" role="test" />
-        <file name="recur_complete.xml" role="test" />
-        <file name="recur_fail.xml" role="test" />
-        <file name="task.xml" role="test" />
-       </dir> <!-- /test/Horde/Kolab/Format/fixtures -->
-       <dir name="Integration">
-        <file name="ContactTest.php" role="test" />
-        <file name="EventTest.php" role="test" />
-        <file name="PreferencesTest.php" role="test" />
-        <file name="RecurrenceTest.php" role="test" />
-        <file name="TaskTest.php" role="test" />
-        <file name="XmlTest.php" role="test" />
-       </dir> <!-- /test/Horde/Kolab/Format/Integration -->
-       <dir name="Stub">
-        <file name="BooleanDefault.php" role="test" />
-        <file name="BooleanNotEmpty.php" role="test" />
-        <file name="ColorDefault.php" role="test" />
-        <file name="ColorNotEmpty.php" role="test" />
-        <file name="Composite.php" role="test" />
-        <file name="DateTimeDefault.php" role="test" />
-        <file name="DateTimeNotEmpty.php" role="test" />
-        <file name="Dummy.php" role="test" />
-        <file name="IntegerDefault.php" role="test" />
-        <file name="IntegerNotEmpty.php" role="test" />
-        <file name="Log.php" role="test" />
-        <file name="MultipleDefault.php" role="test" />
-        <file name="MultipleNotEmpty.php" role="test" />
-        <file name="StringDefault.php" role="test" />
-        <file name="StringNotEmpty.php" role="test" />
-        <file name="Types.php" role="test" />
-       </dir> <!-- /test/Horde/Kolab/Format/Stub -->
-       <dir name="Unit">
-        <dir name="Decorator">
-         <file name="MemoryTest.php" role="test" />
-         <file name="TimedTest.php" role="test" />
-        </dir> <!-- /test/Horde/Kolab/Format/Unit/Decorator -->
-        <dir name="Exception">
-         <file name="MissingUidTest.php" role="test" />
-         <file name="MissingValueTest.php" role="test" />
-         <file name="ParseErrorTest.php" role="test" />
-        </dir> <!-- /test/Horde/Kolab/Format/Unit/Exception -->
-        <dir name="Xml">
-         <dir name="Type">
-          <file name="BooleanTest.php" role="test" />
-          <file name="ColorTest.php" role="test" />
-          <file name="CompositeTest.php" role="test" />
-          <file name="CreationDateTest.php" role="test" />
-          <file name="DateTimeTest.php" role="test" />
-          <file name="IntegerTest.php" role="test" />
-          <file name="ModificationDateTest.php" role="test" />
-          <file name="MultipleTest.php" role="test" />
-          <file name="PrefsApplicationTest.php" role="test" />
-          <file name="ProductIdTest.php" role="test" />
-          <file name="RecurrenceTest.php" role="test" />
-          <file name="RootTest.php" role="test" />
-          <file name="StringTest.php" role="test" />
-          <file name="UidTest.php" role="test" />
-         </dir> <!-- /test/Horde/Kolab/Format/Unit/Xml/Type -->
-         <file name="EnvelopeTest.php" role="test" />
-         <file name="ParserTest.php" role="test" />
-        </dir> <!-- /test/Horde/Kolab/Format/Unit/Xml -->
-        <file name="DateTest.php" role="test" />
-        <file name="FactoryTest.php" role="test" />
-        <file name="XmlTest.php" role="test" />
-       </dir> <!-- /test/Horde/Kolab/Format/Unit -->
-       <file name="AllTests.php" role="test" />
-       <file name="Autoload.php" role="test" />
-       <file name="bootstrap.php" role="test" />
-       <file name="TestCase.php" role="test" />
-      </dir> <!-- /test/Horde/Kolab/Format -->
-     </dir> <!-- /test/Horde/Kolab -->
-    </dir> <!-- /test/Horde -->
+    <dir name="fixtures">
+     <file name="contact-kyr.xml" role="test" />
+     <file name="contact_address.xml" role="test" />
+     <file name="contact_category.xml" role="test" />
+     <file name="contact_mail.xml" role="test" />
+     <file name="contact_pgp.xml" role="test" />
+     <file name="event_umlaut.xml" role="test" />
+     <file name="event_umlaut_broken.xml" role="test" />
+     <file name="preferences_read_old.xml" role="test" />
+     <file name="preferences_write_old.xml" role="test" />
+     <file name="recur.xml" role="test" />
+     <file name="recur_complete.xml" role="test" />
+     <file name="recur_fail.xml" role="test" />
+     <file name="task.xml" role="test" />
+    </dir> <!-- /test/fixtures -->
+    <dir name="Integration">
+     <file name="ContactTest.php" role="test" />
+     <file name="EventTest.php" role="test" />
+     <file name="PreferencesTest.php" role="test" />
+     <file name="RecurrenceTest.php" role="test" />
+     <file name="TaskTest.php" role="test" />
+     <file name="XmlTest.php" role="test" />
+    </dir> <!-- /test/Integration -->
+    <dir name="Stub">
+     <file name="BooleanDefault.php" role="test" />
+     <file name="BooleanNotEmpty.php" role="test" />
+     <file name="ColorDefault.php" role="test" />
+     <file name="ColorNotEmpty.php" role="test" />
+     <file name="Composite.php" role="test" />
+     <file name="DateTimeDefault.php" role="test" />
+     <file name="DateTimeNotEmpty.php" role="test" />
+     <file name="Dummy.php" role="test" />
+     <file name="IntegerDefault.php" role="test" />
+     <file name="IntegerNotEmpty.php" role="test" />
+     <file name="Log.php" role="test" />
+     <file name="MultipleDefault.php" role="test" />
+     <file name="MultipleNotEmpty.php" role="test" />
+     <file name="StringDefault.php" role="test" />
+     <file name="StringNotEmpty.php" role="test" />
+     <file name="Types.php" role="test" />
+     <file name="Types_V1.php" role="test" />
+     <file name="Types_V2.php" role="test" />
+    </dir> <!-- /test/Stub -->
+    <dir name="Unit">
+     <dir name="Decorator">
+      <file name="MemoryTest.php" role="test" />
+      <file name="TimedTest.php" role="test" />
+     </dir> <!-- /test/Unit/Decorator -->
+     <dir name="Exception">
+      <file name="MissingUidTest.php" role="test" />
+      <file name="MissingValueTest.php" role="test" />
+      <file name="ParseErrorTest.php" role="test" />
+     </dir> <!-- /test/Unit/Exception -->
+     <dir name="Xml">
+      <dir name="Type">
+       <file name="BooleanTest.php" role="test" />
+       <file name="ColorTest.php" role="test" />
+       <file name="CompositeTest.php" role="test" />
+       <file name="CreationDateTest.php" role="test" />
+       <file name="DateTimeTest.php" role="test" />
+       <file name="IntegerTest.php" role="test" />
+       <file name="ModificationDateTest.php" role="test" />
+       <file name="MultipleTest.php" role="test" />
+       <file name="PrefsApplicationTest.php" role="test" />
+       <file name="ProductIdTest.php" role="test" />
+       <file name="RecurrenceTest.php" role="test" />
+       <file name="RootTest.php" role="test" />
+       <file name="StringTest.php" role="test" />
+       <file name="UidTest.php" role="test" />
+      </dir> <!-- /test/Unit/Xml/Type -->
+      <file name="EnvelopeTest.php" role="test" />
+      <file name="ParserTest.php" role="test" />
+     </dir> <!-- /test/Unit/Xml -->
+     <file name="DateTest.php" role="test" />
+     <file name="FactoryTest.php" role="test" />
+     <file name="XmlTest.php" role="test" />
+    </dir> <!-- /test/Unit -->
+    <file name="AllTests.php" role="test" />
+    <file name="Autoload.php" role="test" />
+    <file name="bootstrap.php" role="test" />
+    <file name="TestCase.php" role="test" />
    </dir> <!-- /test -->
    <file name="LICENSE" role="doc" />
+   <file name="README.md" role="doc" />
    <file name="README.rst" role="doc" />
   </dir> <!-- / -->
  </contents>
  <dependencies>
   <required>
    <php>
-    <min>5.3.0</min>
-    <max>8.0.0alpha1</max>
-    <exclude>8.0.0alpha1</exclude>
+    <min>7.0.0</min>
+    <max>9.0.0alpha1</max>
+    <exclude>9.0.0alpha1</exclude>
    </php>
    <pearinstaller>
     <min>1.7.0</min>
    </pearinstaller>
-   <package>
-    <name>Horde_Exception</name>
-    <channel>pear.horde.org</channel>
-    <min>2.0.0</min>
-    <max>3.0.0alpha1</max>
-    <exclude>3.0.0alpha1</exclude>
-   </package>
-   <package>
-    <name>Horde_Util</name>
-    <channel>pear.horde.org</channel>
-    <min>2.0.0</min>
-    <max>3.0.0alpha1</max>
-    <exclude>3.0.0alpha1</exclude>
-   </package>
    <extension>
     <name>dom</name>
    </extension>
   </required>
   <optional>
-   <package>
-    <name>Horde_Support</name>
-    <channel>pear.horde.org</channel>
-    <min>2.0.0</min>
-    <max>3.0.0alpha1</max>
-    <exclude>3.0.0alpha1</exclude>
-   </package>
-   <package>
-    <name>Horde_Test</name>
-    <channel>pear.horde.org</channel>
-    <min>2.1.0</min>
-    <max>3.0.0alpha1</max>
-    <exclude>3.0.0alpha1</exclude>
-   </package>
    <extension>
     <name>mbstring</name>
    </extension>
@@ -310,6 +288,11 @@
  </dependencies>
  <phprelease>
   <filelist>
+   <install as="workflows/ci.yml" name=".github/workflows/ci.yml" />
+   <install as="workflows/phpdoc.yml" name=".github/workflows/phpdoc.yml" />
+   <install as="workflows/release.yml" name=".github/workflows/release.yml" />
+   <install as="workflows/update-composer-json.yml" name=".github/workflows/update-composer-json.yml" />
+   <install as="workflows/update-satis.yml" name=".github/workflows/update-satis.yml" />
    <install as="CHANGES" name="doc/Horde/Kolab/Format/CHANGES" />
    <install as="DOCS_ORIGIN.rst" name="doc/Horde/Kolab/Format/DOCS_ORIGIN.rst" />
    <install as="examples/event.php" name="doc/Horde/Kolab/Format/examples/event.php" />
@@ -398,70 +381,73 @@
    <install as="Horde/Kolab/Format/Xml/Type/Uid.php" name="lib/Horde/Kolab/Format/Xml/Type/Uid.php" />
    <install as="Horde/Kolab/Format/Xml/Type/XmlAppend.php" name="lib/Horde/Kolab/Format/Xml/Type/XmlAppend.php" />
    <install as="LICENSE" name="LICENSE" />
+   <install as="README.md" name="README.md" />
    <install as="README.rst" name="README.rst" />
-   <install as="Horde/Kolab/Format/AllTests.php" name="test/Horde/Kolab/Format/AllTests.php" />
-   <install as="Horde/Kolab/Format/Autoload.php" name="test/Horde/Kolab/Format/Autoload.php" />
-   <install as="Horde/Kolab/Format/bootstrap.php" name="test/Horde/Kolab/Format/bootstrap.php" />
-   <install as="Horde/Kolab/Format/fixtures/contact-kyr.xml" name="test/Horde/Kolab/Format/fixtures/contact-kyr.xml" />
-   <install as="Horde/Kolab/Format/fixtures/contact_address.xml" name="test/Horde/Kolab/Format/fixtures/contact_address.xml" />
-   <install as="Horde/Kolab/Format/fixtures/contact_category.xml" name="test/Horde/Kolab/Format/fixtures/contact_category.xml" />
-   <install as="Horde/Kolab/Format/fixtures/contact_mail.xml" name="test/Horde/Kolab/Format/fixtures/contact_mail.xml" />
-   <install as="Horde/Kolab/Format/fixtures/contact_pgp.xml" name="test/Horde/Kolab/Format/fixtures/contact_pgp.xml" />
-   <install as="Horde/Kolab/Format/fixtures/event_umlaut.xml" name="test/Horde/Kolab/Format/fixtures/event_umlaut.xml" />
-   <install as="Horde/Kolab/Format/fixtures/event_umlaut_broken.xml" name="test/Horde/Kolab/Format/fixtures/event_umlaut_broken.xml" />
-   <install as="Horde/Kolab/Format/fixtures/preferences_read_old.xml" name="test/Horde/Kolab/Format/fixtures/preferences_read_old.xml" />
-   <install as="Horde/Kolab/Format/fixtures/preferences_write_old.xml" name="test/Horde/Kolab/Format/fixtures/preferences_write_old.xml" />
-   <install as="Horde/Kolab/Format/fixtures/recur.xml" name="test/Horde/Kolab/Format/fixtures/recur.xml" />
-   <install as="Horde/Kolab/Format/fixtures/recur_complete.xml" name="test/Horde/Kolab/Format/fixtures/recur_complete.xml" />
-   <install as="Horde/Kolab/Format/fixtures/recur_fail.xml" name="test/Horde/Kolab/Format/fixtures/recur_fail.xml" />
-   <install as="Horde/Kolab/Format/fixtures/task.xml" name="test/Horde/Kolab/Format/fixtures/task.xml" />
-   <install as="Horde/Kolab/Format/Integration/ContactTest.php" name="test/Horde/Kolab/Format/Integration/ContactTest.php" />
-   <install as="Horde/Kolab/Format/Integration/EventTest.php" name="test/Horde/Kolab/Format/Integration/EventTest.php" />
-   <install as="Horde/Kolab/Format/Integration/PreferencesTest.php" name="test/Horde/Kolab/Format/Integration/PreferencesTest.php" />
-   <install as="Horde/Kolab/Format/Integration/RecurrenceTest.php" name="test/Horde/Kolab/Format/Integration/RecurrenceTest.php" />
-   <install as="Horde/Kolab/Format/Integration/TaskTest.php" name="test/Horde/Kolab/Format/Integration/TaskTest.php" />
-   <install as="Horde/Kolab/Format/Integration/XmlTest.php" name="test/Horde/Kolab/Format/Integration/XmlTest.php" />
-   <install as="Horde/Kolab/Format/Stub/BooleanDefault.php" name="test/Horde/Kolab/Format/Stub/BooleanDefault.php" />
-   <install as="Horde/Kolab/Format/Stub/BooleanNotEmpty.php" name="test/Horde/Kolab/Format/Stub/BooleanNotEmpty.php" />
-   <install as="Horde/Kolab/Format/Stub/ColorDefault.php" name="test/Horde/Kolab/Format/Stub/ColorDefault.php" />
-   <install as="Horde/Kolab/Format/Stub/ColorNotEmpty.php" name="test/Horde/Kolab/Format/Stub/ColorNotEmpty.php" />
-   <install as="Horde/Kolab/Format/Stub/Composite.php" name="test/Horde/Kolab/Format/Stub/Composite.php" />
-   <install as="Horde/Kolab/Format/Stub/DateTimeDefault.php" name="test/Horde/Kolab/Format/Stub/DateTimeDefault.php" />
-   <install as="Horde/Kolab/Format/Stub/DateTimeNotEmpty.php" name="test/Horde/Kolab/Format/Stub/DateTimeNotEmpty.php" />
-   <install as="Horde/Kolab/Format/Stub/Dummy.php" name="test/Horde/Kolab/Format/Stub/Dummy.php" />
-   <install as="Horde/Kolab/Format/Stub/IntegerDefault.php" name="test/Horde/Kolab/Format/Stub/IntegerDefault.php" />
-   <install as="Horde/Kolab/Format/Stub/IntegerNotEmpty.php" name="test/Horde/Kolab/Format/Stub/IntegerNotEmpty.php" />
-   <install as="Horde/Kolab/Format/Stub/Log.php" name="test/Horde/Kolab/Format/Stub/Log.php" />
-   <install as="Horde/Kolab/Format/Stub/MultipleDefault.php" name="test/Horde/Kolab/Format/Stub/MultipleDefault.php" />
-   <install as="Horde/Kolab/Format/Stub/MultipleNotEmpty.php" name="test/Horde/Kolab/Format/Stub/MultipleNotEmpty.php" />
-   <install as="Horde/Kolab/Format/Stub/StringDefault.php" name="test/Horde/Kolab/Format/Stub/StringDefault.php" />
-   <install as="Horde/Kolab/Format/Stub/StringNotEmpty.php" name="test/Horde/Kolab/Format/Stub/StringNotEmpty.php" />
-   <install as="Horde/Kolab/Format/Stub/Types.php" name="test/Horde/Kolab/Format/Stub/Types.php" />
-   <install as="Horde/Kolab/Format/TestCase.php" name="test/Horde/Kolab/Format/TestCase.php" />
-   <install as="Horde/Kolab/Format/Unit/DateTest.php" name="test/Horde/Kolab/Format/Unit/DateTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Decorator/MemoryTest.php" name="test/Horde/Kolab/Format/Unit/Decorator/MemoryTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Decorator/TimedTest.php" name="test/Horde/Kolab/Format/Unit/Decorator/TimedTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Exception/MissingUidTest.php" name="test/Horde/Kolab/Format/Unit/Exception/MissingUidTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Exception/MissingValueTest.php" name="test/Horde/Kolab/Format/Unit/Exception/MissingValueTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Exception/ParseErrorTest.php" name="test/Horde/Kolab/Format/Unit/Exception/ParseErrorTest.php" />
-   <install as="Horde/Kolab/Format/Unit/FactoryTest.php" name="test/Horde/Kolab/Format/Unit/FactoryTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Xml/EnvelopeTest.php" name="test/Horde/Kolab/Format/Unit/Xml/EnvelopeTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Xml/ParserTest.php" name="test/Horde/Kolab/Format/Unit/Xml/ParserTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Xml/Type/BooleanTest.php" name="test/Horde/Kolab/Format/Unit/Xml/Type/BooleanTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Xml/Type/ColorTest.php" name="test/Horde/Kolab/Format/Unit/Xml/Type/ColorTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Xml/Type/CompositeTest.php" name="test/Horde/Kolab/Format/Unit/Xml/Type/CompositeTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Xml/Type/CreationDateTest.php" name="test/Horde/Kolab/Format/Unit/Xml/Type/CreationDateTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Xml/Type/DateTimeTest.php" name="test/Horde/Kolab/Format/Unit/Xml/Type/DateTimeTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Xml/Type/IntegerTest.php" name="test/Horde/Kolab/Format/Unit/Xml/Type/IntegerTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Xml/Type/ModificationDateTest.php" name="test/Horde/Kolab/Format/Unit/Xml/Type/ModificationDateTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Xml/Type/MultipleTest.php" name="test/Horde/Kolab/Format/Unit/Xml/Type/MultipleTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Xml/Type/PrefsApplicationTest.php" name="test/Horde/Kolab/Format/Unit/Xml/Type/PrefsApplicationTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Xml/Type/ProductIdTest.php" name="test/Horde/Kolab/Format/Unit/Xml/Type/ProductIdTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Xml/Type/RecurrenceTest.php" name="test/Horde/Kolab/Format/Unit/Xml/Type/RecurrenceTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Xml/Type/RootTest.php" name="test/Horde/Kolab/Format/Unit/Xml/Type/RootTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Xml/Type/StringTest.php" name="test/Horde/Kolab/Format/Unit/Xml/Type/StringTest.php" />
-   <install as="Horde/Kolab/Format/Unit/Xml/Type/UidTest.php" name="test/Horde/Kolab/Format/Unit/Xml/Type/UidTest.php" />
-   <install as="Horde/Kolab/Format/Unit/XmlTest.php" name="test/Horde/Kolab/Format/Unit/XmlTest.php" />
+   <install as="AllTests.php" name="test/AllTests.php" />
+   <install as="Autoload.php" name="test/Autoload.php" />
+   <install as="bootstrap.php" name="test/bootstrap.php" />
+   <install as="fixtures/contact-kyr.xml" name="test/fixtures/contact-kyr.xml" />
+   <install as="fixtures/contact_address.xml" name="test/fixtures/contact_address.xml" />
+   <install as="fixtures/contact_category.xml" name="test/fixtures/contact_category.xml" />
+   <install as="fixtures/contact_mail.xml" name="test/fixtures/contact_mail.xml" />
+   <install as="fixtures/contact_pgp.xml" name="test/fixtures/contact_pgp.xml" />
+   <install as="fixtures/event_umlaut.xml" name="test/fixtures/event_umlaut.xml" />
+   <install as="fixtures/event_umlaut_broken.xml" name="test/fixtures/event_umlaut_broken.xml" />
+   <install as="fixtures/preferences_read_old.xml" name="test/fixtures/preferences_read_old.xml" />
+   <install as="fixtures/preferences_write_old.xml" name="test/fixtures/preferences_write_old.xml" />
+   <install as="fixtures/recur.xml" name="test/fixtures/recur.xml" />
+   <install as="fixtures/recur_complete.xml" name="test/fixtures/recur_complete.xml" />
+   <install as="fixtures/recur_fail.xml" name="test/fixtures/recur_fail.xml" />
+   <install as="fixtures/task.xml" name="test/fixtures/task.xml" />
+   <install as="Integration/ContactTest.php" name="test/Integration/ContactTest.php" />
+   <install as="Integration/EventTest.php" name="test/Integration/EventTest.php" />
+   <install as="Integration/PreferencesTest.php" name="test/Integration/PreferencesTest.php" />
+   <install as="Integration/RecurrenceTest.php" name="test/Integration/RecurrenceTest.php" />
+   <install as="Integration/TaskTest.php" name="test/Integration/TaskTest.php" />
+   <install as="Integration/XmlTest.php" name="test/Integration/XmlTest.php" />
+   <install as="Stub/BooleanDefault.php" name="test/Stub/BooleanDefault.php" />
+   <install as="Stub/BooleanNotEmpty.php" name="test/Stub/BooleanNotEmpty.php" />
+   <install as="Stub/ColorDefault.php" name="test/Stub/ColorDefault.php" />
+   <install as="Stub/ColorNotEmpty.php" name="test/Stub/ColorNotEmpty.php" />
+   <install as="Stub/Composite.php" name="test/Stub/Composite.php" />
+   <install as="Stub/DateTimeDefault.php" name="test/Stub/DateTimeDefault.php" />
+   <install as="Stub/DateTimeNotEmpty.php" name="test/Stub/DateTimeNotEmpty.php" />
+   <install as="Stub/Dummy.php" name="test/Stub/Dummy.php" />
+   <install as="Stub/IntegerDefault.php" name="test/Stub/IntegerDefault.php" />
+   <install as="Stub/IntegerNotEmpty.php" name="test/Stub/IntegerNotEmpty.php" />
+   <install as="Stub/Log.php" name="test/Stub/Log.php" />
+   <install as="Stub/MultipleDefault.php" name="test/Stub/MultipleDefault.php" />
+   <install as="Stub/MultipleNotEmpty.php" name="test/Stub/MultipleNotEmpty.php" />
+   <install as="Stub/StringDefault.php" name="test/Stub/StringDefault.php" />
+   <install as="Stub/StringNotEmpty.php" name="test/Stub/StringNotEmpty.php" />
+   <install as="Stub/Types.php" name="test/Stub/Types.php" />
+   <install as="Stub/Types_V1.php" name="test/Stub/Types_V1.php" />
+   <install as="Stub/Types_V2.php" name="test/Stub/Types_V2.php" />
+   <install as="TestCase.php" name="test/TestCase.php" />
+   <install as="Unit/DateTest.php" name="test/Unit/DateTest.php" />
+   <install as="Unit/Decorator/MemoryTest.php" name="test/Unit/Decorator/MemoryTest.php" />
+   <install as="Unit/Decorator/TimedTest.php" name="test/Unit/Decorator/TimedTest.php" />
+   <install as="Unit/Exception/MissingUidTest.php" name="test/Unit/Exception/MissingUidTest.php" />
+   <install as="Unit/Exception/MissingValueTest.php" name="test/Unit/Exception/MissingValueTest.php" />
+   <install as="Unit/Exception/ParseErrorTest.php" name="test/Unit/Exception/ParseErrorTest.php" />
+   <install as="Unit/FactoryTest.php" name="test/Unit/FactoryTest.php" />
+   <install as="Unit/Xml/EnvelopeTest.php" name="test/Unit/Xml/EnvelopeTest.php" />
+   <install as="Unit/Xml/ParserTest.php" name="test/Unit/Xml/ParserTest.php" />
+   <install as="Unit/Xml/Type/BooleanTest.php" name="test/Unit/Xml/Type/BooleanTest.php" />
+   <install as="Unit/Xml/Type/ColorTest.php" name="test/Unit/Xml/Type/ColorTest.php" />
+   <install as="Unit/Xml/Type/CompositeTest.php" name="test/Unit/Xml/Type/CompositeTest.php" />
+   <install as="Unit/Xml/Type/CreationDateTest.php" name="test/Unit/Xml/Type/CreationDateTest.php" />
+   <install as="Unit/Xml/Type/DateTimeTest.php" name="test/Unit/Xml/Type/DateTimeTest.php" />
+   <install as="Unit/Xml/Type/IntegerTest.php" name="test/Unit/Xml/Type/IntegerTest.php" />
+   <install as="Unit/Xml/Type/ModificationDateTest.php" name="test/Unit/Xml/Type/ModificationDateTest.php" />
+   <install as="Unit/Xml/Type/MultipleTest.php" name="test/Unit/Xml/Type/MultipleTest.php" />
+   <install as="Unit/Xml/Type/PrefsApplicationTest.php" name="test/Unit/Xml/Type/PrefsApplicationTest.php" />
+   <install as="Unit/Xml/Type/ProductIdTest.php" name="test/Unit/Xml/Type/ProductIdTest.php" />
+   <install as="Unit/Xml/Type/RecurrenceTest.php" name="test/Unit/Xml/Type/RecurrenceTest.php" />
+   <install as="Unit/Xml/Type/RootTest.php" name="test/Unit/Xml/Type/RootTest.php" />
+   <install as="Unit/Xml/Type/StringTest.php" name="test/Unit/Xml/Type/StringTest.php" />
+   <install as="Unit/Xml/Type/UidTest.php" name="test/Unit/Xml/Type/UidTest.php" />
+   <install as="Unit/XmlTest.php" name="test/Unit/XmlTest.php" />
   </filelist>
  </phprelease>
  <changelog>
@@ -545,7 +531,8 @@
   <release>
    <version>
     <release>1.0.1</release>
-    <api>1.0.0</api></version>
+    <api>1.0.0</api>
+   </version>
    <stability>
     <release>stable</release>
     <api>stable</api>
@@ -560,7 +547,8 @@
   <release>
    <version>
     <release>1.1.0</release>
-    <api>1.1.0</api></version>
+    <api>1.1.0</api>
+   </version>
    <stability>
     <release>stable</release>
     <api>stable</api>
@@ -580,10 +568,12 @@
   <release>
    <version>
     <release>1.1.1</release>
-    <api>1.1.0</api></version>
+    <api>1.1.0</api>
+   </version>
    <stability>
     <release>stable</release>
-    <api>stable</api></stability>
+    <api>stable</api>
+   </stability>
    <date>2011-12-16</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
@@ -594,10 +584,12 @@
   <release>
    <version>
     <release>1.1.2</release>
-    <api>1.1.0</api></version>
+    <api>1.1.0</api>
+   </version>
    <stability>
     <release>stable</release>
-    <api>stable</api></stability>
+    <api>stable</api>
+   </stability>
    <date>2012-04-10</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
@@ -607,10 +599,12 @@
   <release>
    <version>
     <release>2.0.0alpha1</release>
-    <api>1.1.0</api></version>
+    <api>1.1.0</api>
+   </version>
    <stability>
     <release>alpha</release>
-    <api>stable</api></stability>
+    <api>stable</api>
+   </stability>
    <date>2012-07-05</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
@@ -620,10 +614,12 @@
   <release>
    <version>
     <release>2.0.0beta1</release>
-    <api>1.1.0</api></version>
+    <api>1.1.0</api>
+   </version>
    <stability>
     <release>beta</release>
-    <api>stable</api></stability>
+    <api>stable</api>
+   </stability>
    <date>2012-07-19</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
@@ -633,10 +629,12 @@
   <release>
    <version>
     <release>2.0.0beta2</release>
-    <api>1.1.0</api></version>
+    <api>1.1.0</api>
+   </version>
    <stability>
     <release>beta</release>
-    <api>stable</api></stability>
+    <api>stable</api>
+   </stability>
    <date>2012-10-12</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
@@ -646,10 +644,12 @@
   <release>
    <version>
     <release>2.0.0RC1</release>
-    <api>1.1.0</api></version>
+    <api>1.1.0</api>
+   </version>
    <stability>
     <release>beta</release>
-    <api>stable</api></stability>
+    <api>stable</api>
+   </stability>
    <date>2012-10-26</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
@@ -659,10 +659,12 @@
   <release>
    <version>
     <release>2.0.0</release>
-    <api>2.0.0</api></version>
+    <api>2.0.0</api>
+   </version>
    <stability>
     <release>stable</release>
-    <api>stable</api></stability>
+    <api>stable</api>
+   </stability>
    <date>2012-10-30</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
@@ -672,10 +674,12 @@
   <release>
    <version>
     <release>2.0.1</release>
-    <api>2.0.0</api></version>
+    <api>2.0.0</api>
+   </version>
    <stability>
     <release>stable</release>
-    <api>stable</api></stability>
+    <api>stable</api>
+   </stability>
    <date>2012-11-19</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
@@ -685,10 +689,12 @@
   <release>
    <version>
     <release>2.0.2</release>
-    <api>2.0.0</api></version>
+    <api>2.0.0</api>
+   </version>
    <stability>
     <release>stable</release>
-    <api>stable</api></stability>
+    <api>stable</api>
+   </stability>
    <date>2013-01-09</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
@@ -699,10 +705,12 @@
   <release>
    <version>
     <release>2.0.3</release>
-    <api>2.0.0</api></version>
+    <api>2.0.0</api>
+   </version>
    <stability>
     <release>stable</release>
-    <api>stable</api></stability>
+    <api>stable</api>
+   </stability>
    <date>2013-03-05</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
@@ -712,10 +720,12 @@
   <release>
    <version>
     <release>2.0.4</release>
-    <api>2.0.0</api></version>
+    <api>2.0.0</api>
+   </version>
    <stability>
     <release>stable</release>
-    <api>stable</api></stability>
+    <api>stable</api>
+   </stability>
    <date>2013-09-02</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
@@ -725,10 +735,12 @@
   <release>
    <version>
     <release>2.0.5</release>
-    <api>2.0.0</api></version>
+    <api>2.0.0</api>
+   </version>
    <stability>
     <release>stable</release>
-    <api>stable</api></stability>
+    <api>stable</api>
+   </stability>
    <date>2013-11-19</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
@@ -738,10 +750,12 @@
   <release>
    <version>
     <release>2.0.6</release>
-    <api>2.0.0</api></version>
+    <api>2.0.0</api>
+   </version>
    <stability>
     <release>stable</release>
-    <api>stable</api></stability>
+    <api>stable</api>
+   </stability>
    <date>2015-01-09</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
@@ -751,10 +765,12 @@
   <release>
    <version>
     <release>2.0.7</release>
-    <api>2.0.0</api></version>
+    <api>2.0.0</api>
+   </version>
    <stability>
     <release>stable</release>
-    <api>stable</api></stability>
+    <api>stable</api>
+   </stability>
    <date>2015-04-28</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
@@ -764,10 +780,12 @@
   <release>
    <version>
     <release>2.0.8</release>
-    <api>2.0.0</api></version>
+    <api>2.0.0</api>
+   </version>
    <stability>
     <release>stable</release>
-    <api>stable</api></stability>
+    <api>stable</api>
+   </stability>
    <date>2016-02-01</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
@@ -777,10 +795,12 @@
   <release>
    <version>
     <release>2.0.9</release>
-    <api>2.0.0</api></version>
+    <api>2.0.0</api>
+   </version>
    <stability>
     <release>stable</release>
-    <api>stable</api></stability>
+    <api>stable</api>
+   </stability>
    <date>2016-07-02</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
@@ -790,12 +810,14 @@
   <release>
    <version>
     <release>2.0.10</release>
-    <api>2.0.0</api></version>
+    <api>2.0.0</api>
+   </version>
    <stability>
     <release>stable</release>
-    <api>stable</api></stability>
-   <date>2017-11-14</date>
-   <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
+    <api>stable</api>
+   </stability>
+   <date>2017-10-20</date>
+   <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1-only</license>
    <notes>
 * 
    </notes>
