@@ -79,6 +79,12 @@ class Horde_Kolab_Format_Date
         if (empty($date_time)) {
             return false;
         }
+        // Allow ISO 8601:2004 with and without fractional part
+        if (preg_match('/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})(\.\d+)?Z$/', $date_time, $parts) == true) {
+
+        } else {
+            return false;
+        } 
 
         try {
             $date = new DateTime($date_time);

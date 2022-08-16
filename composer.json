@@ -1,7 +1,7 @@
 {
     "name": "horde/kolab_format",
     "description": "Kolab data format library",
-    "type": "horde-library",
+    "type": "library",
     "homepage": "https://www.horde.org/libraries/Horde_Kolab_Format",
     "license": "LGPL-2.1-only",
     "authors": [
@@ -11,8 +11,7 @@
             "role": "lead"
         }
     ],
-    
-    "time": "2020-10-27",
+    "time": "2022-08-15",
     "repositories": [
         {
             "type": "composer",
@@ -20,11 +19,14 @@
         }
     ],
     "require": {
-        "horde/horde-installer-plugin": "^2 || dev-FRAMEWORK_6_0",
-        "php": "^7.4 || ^8",
+        "php": "^7 || ^8",
         "horde/exception": "^3 || dev-FRAMEWORK_6_0",
         "horde/util": "^3 || dev-FRAMEWORK_6_0",
         "ext-dom": "*"
+    },
+    "require-dev": {
+        "horde/test": "^3 || dev-FRAMEWORK_6_0",
+        "phpunit/phpunit": "^9"
     },
     "suggest": {
         "horde/support": "^3 || dev-FRAMEWORK_6_0",
@@ -35,5 +37,16 @@
         "psr-0": {
             "Horde_Kolab_Format": "lib/"
         }
-    }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Horde\\Kolab\\Format\\Test\\": "test/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "horde/horde-installer-plugin": true
+        }
+    },
+    "minimum-stability": "dev"
 }
